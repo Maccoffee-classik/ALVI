@@ -79,3 +79,66 @@ h1 .highlight {
 .tag.security { top: 68%; left: 63%; }
 .tag.structured { top: 76%; left: -10%; }
 .tag.server { top: 83%; left: 45%; }
+
+/*2йблок*/
+.section-text-center {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+.text-primary {
+    color: #0158FF !important;
+}
+.section-text-center .text-uppercase {
+    font-size: 0.875rem!important;
+}
+.section-text-center h2 {
+    font-size: 2.625rem!important;
+}
+/*3йблок*/
+
+.partners-section {
+    padding-top: 135px;
+    padding-bottom: 120px;
+    background-color: #f2f2f2;
+}
+.partners-section__wrapper {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 64px!important;
+    position: relative;
+
+}
+
+/* Фоновый текст "trusted by" */
+.partners-section .trusted-bg-text {
+    position: absolute;
+    top: -73px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 600;
+    font-size: 18rem;
+    color: #fff;
+
+    white-space: nowrap;
+    pointer-events: none;
+    user-select: none;
+}
+/* Заголовок блока */
+.partners-section h2 {
+    font-size: 2.625rem!important;
+    font-weight: 600; /* полужирный (Semibold) */
+}
+.partners-section h2 .highlight {
+    color: #0158FF;   /* синий цвет для слова "Partners" */
+}
+/* Стили для логотипов партнёров */
+.partners-section img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media (max-width: 1400px) {
+    .partners-section .trusted-bg-text {
+        font-size: 19.818vw;
+    }
+}
