@@ -1,0 +1,81 @@
+body {
+    font-family: 'Manrope', sans-serif;
+    background-color: #f2f2f2!important;
+}
+
+.section-main {
+    background-color: #f2f2f2;
+}
+.section-main__wrapper {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 20px 0 20px  64px!important;
+}
+
+h1 {
+    font-size: 4rem!important;
+    font-weight: 600;
+}
+
+h1 .highlight {
+    color: #0158FF;
+    font-weight: 600;
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    font-weight: 600;
+}
+
+.note {
+    color: #686868;
+    margin-top: 0.875rem;
+}
+
+.btn-primary {
+    background-color: #0158FF;
+    border-color: #0158FF;
+}
+
+.btn-primary:hover {
+    background-color: #0147cc;
+    border-color: #0147cc;
+}
+
+.map-wrapper {
+    position: relative;
+}
+
+.map-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.tag {
+    position: absolute;
+    background-color: #0158FF;
+    color: #fff;
+    padding: 4px 10px;
+    font-size: 0.8rem;
+    border-radius: 7px;
+    white-space: nowrap;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: 0.3s ease-in-out;
+}
+
+.tag.grow-in {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Примерное позиционирование */
+.tag.bms { top: 24%; left: 40%; }
+.tag.lowvoltage { top: 40%; left: 67%; }
+.tag.access { top: 54%; left: 54%; }
+.tag.wifi { top: 63%; left: 31%; }
+.tag.security { top: 68%; left: 63%; }
+.tag.structured { top: 76%; left: -10%; }
+.tag.server { top: 83%; left: 45%; }
