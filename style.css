@@ -136,9 +136,39 @@ h1 .highlight {
     max-width: 100%;
     height: auto;
 }
-
+/*4йблок*/
+.equipment-card {
+    height: 240px;
+}
+.equipment-section h2 {
+    font-size: 2.625rem!important;
+}
+.equipment-card .rounded-4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 40px;
+}
+.equipment-card h5 {
+    font-size: 1.75rem!important;
+}
+.text-primary {
+    color: #0158FF !important;
+}
+.object-fit-cover {
+    object-fit: cover;
+}
 @media (max-width: 1400px) {
     .partners-section .trusted-bg-text {
         font-size: 19.818vw;
+    }
+}
+@media (max-width: 720px) {
+    .equipment-card {
+        height: 153px;
+    }
+    .equipment-card .rounded-4 {
+
+        padding: 24px;
     }
 }
