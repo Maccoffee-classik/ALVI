@@ -444,6 +444,66 @@
 
     </div>
 </section>
+
+<section class="callback-section">
+    <div class="container-xxl callback-section__wrapper">
+    <div class="row align-items-start"><!-- align top of columns -->
+        <!-- Left section: Heading and subtitle -->
+        <div class="col-12 col-md-6 mb-4 mb-md-0"><!-- margin-bottom on small for spacing -->
+            <h2 class="fw-bold"><span class="text-primary">Have a project or need a quote?</span> Reach out &ndash; we&#39;ll get back within 1 business day</h2>
+
+
+
+        </div>
+        <!-- Right section: Form -->
+        <div class="ps-md-5 pe-md-0 col-12 col-md-6">
+            <form id="quoteForm" novalidate><!-- novalidate disables built-in browser validation -->
+                <!-- Full Name field -->
+                <div class="mb-3">
+                    <label for="fullName" class="form-label ">Full Name</label>
+                    <input type="text" id="fullName" class="form-control form-line" required />
+                    <div class="invalid-feedback">This field is required</div>
+                </div>
+                <!-- Company field -->
+                <div class="mb-3">
+                    <label for="company" class="form-label">Company</label>
+                    <input type="text" id="company" class="form-control form-line" required />
+                    <div class="invalid-feedback">This field is required</div>
+                </div>
+                <!-- Email/Phone field -->
+                <div class="mb-3">
+                    <label for="contact" class="form-label">Email / Phone</label>
+                    <input type="text" id="contact" class="form-control form-line" required />
+                    <div class="invalid-feedback">This field is required</div>
+                </div>
+                <!-- Message field (textarea) -->
+                <div class="mb-3">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea id="message" class="form-control form-line" rows="1" required></textarea>
+                    <div class="invalid-feedback">This field is required</div>
+                </div>
+                <!-- File upload field -->
+                <div class="mb-4 d-flex align-items-center">
+                    <input type="file" id="projectFile" class="d-none" />
+                    <!-- Label styled as button -->
+                    <label for="projectFile" class="btn btn-outline-primary me-3 mb-0">Add file</label>
+                    <span class="text-muted flex-grow-1">Upload project files to support<br> your request (optional)</span>
+                </div>
+                <!-- Submit button -->
+                <button type="submit" class="btn btn-primary mb-3">Send Request</button>
+                <!-- Privacy policy text -->
+                <p class="small text-muted mb-0">
+                    By submitting this form, you agree to our
+                    <a href="#" class="text-primary text-decoration-none">Privacy Policy</a>.
+                </p>
+            </form>
+        </div>
+    </div>
+</div>
+</section>
+
+
+
 <section class="contacts-section ">
     <div class="container-xxl contacts-section__wrapper">
     <div class=" d-flex flex-column flex-md-row justify-content-between align-items-start gap-4 position-relative">
@@ -476,6 +536,39 @@
         <div class="alvigroup-bg-text text-center " style="letter-spacing: -2px;">ALVIGROUP</div>
 
 </section>
-
+<script>
+    document.getElementById('quoteForm').addEventListener('submit', function(event) {
+        event.preventDefault();  // Prevent actual form submission
+        // Remove previous error states
+        const form = event.target;
+        const inputs = form.querySelectorAll('input[required], textarea[required]');
+        inputs.forEach(input => {
+            input.classList.remove('is-invalid');
+            // Hide any currently visible invalid feedback messages
+            if(input.nextElementSibling && input.nextElementSibling.classList.contains('invalid-feedback')) {
+                input.nextElementSibling.style.display = 'none';
+            }
+        });
+        // Check each required field
+        let formIsValid = true;
+        inputs.forEach(input => {
+            if (!input.value.trim()) {
+                formIsValid = false;
+                // Mark as invalid
+                input.classList.add('is-invalid');
+                // Show the invalid feedback message
+                if(input.nextElementSibling && input.nextElementSibling.classList.contains('invalid-feedback')) {
+                    input.nextElementSibling.style.display = 'block';
+                }
+            }
+        });
+        if(formIsValid) {
+            // If all fields are filled, you can proceed with form submission.
+            // For demo, we'll just show an alert and reset the form.
+            alert('Form submitted successfully! (All fields are filled)');
+            form.reset();
+        }
+    });
+</script>
 </body>
 </html>
