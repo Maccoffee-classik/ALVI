@@ -288,7 +288,69 @@ h1 .highlight {
     filter: none;
     opacity: 1;
 }
+/*7йблок*/
+.text-primary {
+    color: #0158FF !important;
+}
+.about-section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+    background-color: #f2f2f2;
+}
+.about-section__wrapper {
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 64px!important;
+}
+.about-section h2 {
+    font-size: 2.625rem!important;
+    font-weight: 400!important;
+}
+.about-section p {
+    font-size: 1.5rem!important;
+    font-weight: 500!important;
+}
+.about-section .row .text-primary {
+    font-size: 4rem!important;
+    font-weight: 600!important;
+}
+.about-section .row .small {
+    font-size: 0.75rem!important;
+    font-weight: 600!important;
+}
+/*9йблок*/
+.contacts-section {
+    padding-top: 120px;
+    padding-bottom: 40px;
+    background-color: #f2f2f2;
+}
+.contacts-section__wrapper {
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 64px!important;
+}
+.btn-outline-primary {
+    border-color: #0158FF;
+    color: #0158FF;
+}
 
+.btn-outline-primary:hover {
+    background-color: #0158FF;
+    color: #fff;
+}
+
+.contacts-section .alvigroup-bg-text {
+
+
+
+    font-weight: 600;
+    font-size: 15rem;
+    color: #0158FF;
+    white-space: nowrap;
+    pointer-events: none;
+    user-select: none;
+    margin-top: -40px;
+}
 @media (max-width: 1400px) {
     .partners-section .trusted-bg-text {
         font-size: 19.818vw;
@@ -297,7 +359,10 @@ h1 .highlight {
     .project-section .projects-bg-text {
         font-size: 17.818vw;
         top: -5vw;
-
+    }
+    .contacts-section .alvigroup-bg-text {
+        font-size: 17.818vw;
+        margin-top:  -3vw;
     }
 }
 @media (max-width: 720px) {
