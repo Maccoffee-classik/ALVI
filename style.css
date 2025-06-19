@@ -137,6 +137,9 @@ h1 .highlight {
     height: auto;
 }
 /*4йблок*/
+.equipment-section {
+    padding-bottom: 120px;
+}
 .equipment-card {
     height: 240px;
 }
@@ -158,9 +161,116 @@ h1 .highlight {
 .object-fit-cover {
     object-fit: cover;
 }
+/*5йблок*/
+/* Base font family for the section */
+
+.project-section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+    background-color: #f2f2f2;
+}
+.project-section__wrapper {
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 64px!important;
+    position: relative;
+
+
+}
+.project-section  h2 {
+    font-size: 2.625rem;
+    font-weight: 400;
+
+      /* ensure background text is clipped within rounded corners */
+}
+.project-card {
+    border-top: 1px solid #F0F0F0 ;
+
+    padding: 24px 0 8px 0;
+}
+.project-card-6 {
+    border-bottom: 1px solid #F0F0F0;
+}
+.project-card  h4 {
+    font-size: 1.5rem;
+    font-weight: 400;
+
+    /* ensure background text is clipped within rounded corners */
+}
+.project-card  h6 {
+    font-size: 0.875rem;
+    font-weight: 700;
+
+    /* ensure background text is clipped within rounded corners */
+}
+.project-card  p {
+    font-size: 0.875rem;
+    font-weight: 400;
+
+    /* ensure background text is clipped within rounded corners */
+}
+.project-card .text-blue {
+    font-size: 0.875rem;
+    font-weight: 700;
+
+
+    /* ensure background text is clipped within rounded corners */
+}
+
+/* Blue text highlight (for heading and subheadings as needed) */
+
+.text-blue {
+    color: #0158FF;}
+
+/* Technology/Brand tags styling */
+.tech-tag {
+    display: inline-block;
+    background-color: #F0F0F0; /* light blue background at 10% opacity */
+    color: #040404;
+    border-radius: 4px;
+    padding: 5px 12px;
+    margin: 0 0.5rem 0.5rem 0;  /* spacing between tags */
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+/* Large background "OUR PROJECTS" text styling */
+
+.project-section .projects-bg-text {
+    position: absolute;
+    top: -60px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 600;
+    font-size: 15rem;
+    color: #fff;
+    white-space: nowrap;
+    pointer-events: none;
+    user-select: none;
+}
+.bg-text {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    transform: translateY(-50%);
+    text-align: center;
+    font-size: 12rem;
+    font-weight: 700;
+    color: rgba(0, 0, 0, 0.1);   /* grey text with low opacity */
+    pointer-events: none;       /* make it non-interactive */
+    user-select: none;          /* prevent text selection */
+}
+
 @media (max-width: 1400px) {
     .partners-section .trusted-bg-text {
         font-size: 19.818vw;
+        top: -5vw;
+    }
+    .project-section .projects-bg-text {
+        font-size: 17.818vw;
+        top: -5vw;
+
     }
 }
 @media (max-width: 720px) {
