@@ -85,9 +85,7 @@ h1 .highlight {
     padding-top: 120px;
     padding-bottom: 120px;
 }
-.text-primary {
-    color: #0158FF !important;
-}
+
 .section-text-center .text-uppercase {
     font-size: 0.875rem!important;
 }
@@ -155,9 +153,7 @@ h1 .highlight {
 .equipment-card h5 {
     font-size: 1.75rem!important;
 }
-.text-primary {
-    color: #0158FF !important;
-}
+
 .object-fit-cover {
     object-fit: cover;
 }
@@ -261,6 +257,37 @@ h1 .highlight {
     pointer-events: none;       /* make it non-interactive */
     user-select: none;          /* prevent text selection */
 }
+/*6йблок*/
+.text-primary {
+    color: #0158FF !important;
+}
+.brands-section__wrapper{
+    padding: 64px 120px!important;
+}
+.brands-section h2{
+
+    font-size: 2.625rem!important;
+    font-weight: 400!important;
+}
+.brands-section p{
+    font-size: 1.5rem!important;
+    font-weight: 500!important;
+}
+.brands-block div {
+    margin-bottom: 20px;
+}
+
+
+.grayscale {
+    filter: grayscale(100%);
+    opacity: 0.85;
+    transition: 0.3s;
+}
+
+.grayscale:hover {
+    filter: none;
+    opacity: 1;
+}
 
 @media (max-width: 1400px) {
     .partners-section .trusted-bg-text {
@@ -280,5 +307,27 @@ h1 .highlight {
     .equipment-card .rounded-4 {
 
         padding: 24px;
+    }
+/*5йблок*/
+    .project-section {
+        padding-top: 33px;
+        padding-bottom: 48px;
+
+    }
+/*6йблок*/
+    .brands-section h2{
+
+        font-size: 1.5rem!important;
+
+    }
+    .brands-section p{
+        font-size: 1.125rem!important;
+
+    }
+    .brands-section__wrapper{
+        padding: 48px 22px!important;
+    }
+    .brands-block div {
+        margin-bottom: 0;
     }
 }
