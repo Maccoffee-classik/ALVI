@@ -130,7 +130,7 @@ h1 .highlight {
 /*2йблок*/
 .section-text-center {
     padding-top: 120px;
-    padding-bottom: 120px;
+    padding-bottom: 0px;
 }
 
 .section-text-center .text-uppercase {
@@ -143,7 +143,7 @@ h1 .highlight {
 
 .partners-section {
     position: relative;
-    padding-top: 135px;
+    padding-top: 0px;
     padding-bottom: 120px;
     background-color: #f2f2f2;
 }
@@ -184,7 +184,7 @@ h1 .highlight {
 }
 /*4йблок*/
 .equipment-section {
-    padding-bottom: 120px;
+    padding-bottom: 0px;
 }
 .equipment-card {
     height: 240px;
@@ -209,7 +209,7 @@ h1 .highlight {
 /* Base font family for the section */
 
 .project-section {
-    padding-top: 120px;
+    padding-top: 0px;
     padding-bottom: 120px;
     background-color: #f2f2f2;
 }
