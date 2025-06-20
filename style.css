@@ -55,11 +55,11 @@ nav {
 }
 .section-main__wrapper {
     background-color: #ffffff;
-    border-radius: 12px;
+    border-radius: 16px;
     padding: 20px 0 20px  64px!important;
 }
 
-h1 {
+.section-main h1 {
     font-size: 4rem!important;
     font-weight: 600;
 }
@@ -69,10 +69,10 @@ h1 .highlight {
     font-weight: 600;
 }
 
-.subtitle {
+.section-main .subtitle {
     font-size: 1.5rem;
     margin-top: 1rem;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .note {
@@ -138,6 +138,7 @@ h1 .highlight {
 }
 .section-text-center h2 {
     font-size: 2.625rem!important;
+    font-weight: 400;
 }
 /*3йблок*/
 
@@ -149,7 +150,7 @@ h1 .highlight {
 }
 .partners-section__wrapper {
     background-color: #ffffff;
-    border-radius: 12px;
+    border-radius: 16px;
     padding: 64px!important;
 
 
@@ -172,7 +173,7 @@ h1 .highlight {
 /* Заголовок блока */
 .partners-section h2 {
     font-size: 2.625rem!important;
-    font-weight: 600; /* полужирный (Semibold) */
+    font-weight: 400!important; /* полужирный (Semibold) */
 }
 .partners-section h2 .highlight {
     color: #0158FF;   /* синий цвет для слова "Partners" */
@@ -340,20 +341,20 @@ h1 .highlight {
     padding: 64px!important;
 }
 .about-section h2 {
-    font-size: 2.625rem!important;
-    font-weight: 400!important;
+    font-size: 2.625rem;
+    font-weight: 400;
 }
 .about-section p {
-    font-size: 1.5rem!important;
-    font-weight: 500!important;
+    font-size: 1.5rem;
+    font-weight: 500;
 }
 .about-section .row .text-primary {
     font-size: 4rem!important;
     font-weight: 600!important;
 }
 .about-section .row .small {
-    font-size: 0.75rem!important;
-    font-weight: 600!important;
+    font-size: 0.75rem;
+    font-weight: 600;
 }
 /*8йблок*/
 .callback-section {
@@ -481,7 +482,161 @@ footer a:hover {
 
         box-shadow: none!important;
     }
+    /*1й блок*/
 
+    .section-main__wrapper {
+
+        border-radius: 8px!important;
+        padding: 48px 16px!important;
+    }
+    .section-main h1 {
+        font-size: 2rem!important;
+
+    }
+    .section-main .subtitle {
+        font-size: 1.125rem!important;
+        margin-top: 0.5rem!important;
+
+    }
+    .section-main a.btn.btn-primary.btn-lg {
+        font-size: 0.875rem!important;
+        --bs-btn-padding-y: 0.7rem!important;
+        --bs-btn-padding-x: 1.5rem!important;
+    }
+    .tag {
+
+        font-size: 0.5rem;
+
+    }
+    .tag.structured { top: 76%; left: 0%; }
+
+/*2йблок*/
+    .section-text-center {
+        padding-top: 48px;
+    }
+    .section-text-center h2 {
+        font-size: 1.5rem!important;
+
+    }
+    /*3йблок*/
+    .partners-section h2 {
+        font-size: 1.5rem!important;
+        text-align: center;
+
+    }
+    .partners-section__wrapper {
+        background-color: #ffffff;
+        border-radius: 8px;
+        padding: 48px 22px!important;
+    }
+    .partners-section {
+
+        padding-bottom: 48px;
+    }
+    /*4йблок*/
+    .equipment-section h2 {
+        font-size: 1.5rem !important;
+        text-align: left;
+    }
+    .equipment-card h5 {
+        font-size: 1.375rem!important;
+    }
+    .equipment-card p {
+        font-size: 1rem!important;
+    }
+
+    .equipment-card .rounded-4 {
+
+        padding: 24px;
+    }
+    .equipment-card {
+        height: 204px;
+    }
+    /*5йблок*/
+    /* Base font family for the section */
+
+    .project-section {
+
+        padding-bottom: 48px;
+
+    }
+    .project-section__wrapper {
+        border-radius: 8px;
+        padding: 48px 16px!important;
+
+    }
+    .project-section  h2 {
+        font-size: 1.5rem;
+        font-weight: 400;
+    }
+    .project-card  h4 {
+        font-size: 1.125rem;
+        font-weight: 400;
+    }
+
+    .project-section a.btn.btn-primary.btn-lg {
+        font-size: 0.875rem!important;
+        --bs-btn-padding-y: 0.7rem!important;
+        --bs-btn-padding-x: 1.5rem!important;
+    }
+
+    /*7йблок*/
+
+    .about-section {
+        padding-top: 48px;
+        padding-bottom: 48px;
+
+    }
+    .about-section__wrapper {
+
+        border-radius: 8px;
+        padding: 48px 16px!important;
+    }
+    .about-section h2 {
+        font-size: 1.5rem;
+
+    }
+    .about-section p {
+        font-size: 1.125rem;
+
+    }
+    .about-section .row .text-primary {
+        font-size: 3rem!important;
+
+    }
+
+/*8йблок*/
+    .callback-section__wrapper {
+
+        padding: 0px 16px!important;
+    }
+    .callback-section {
+        padding-top: 48px;
+        padding-bottom: 48px;
+    }
+
+
+    .callback-section h2 {
+
+        font-size: 1.5rem!important;
+    }
+
+
+    .callback-section  span.text-muted {
+        font-size: 0.75rem!important;
+    }
+    /*9йблок*/
+    .contacts-section {
+        padding-top: 48px;
+    }
+    .contacts-section__wrapper {
+
+        border-radius: 8px;
+        padding: 48px 16px!important;
+    }
+    .contacts-section p.text-muted {
+        font-size: 0.875rem!important;
+    }
 
 }
 @media (max-width: 720px) {
@@ -522,11 +677,16 @@ footer a:hover {
     .callback-section {
 
     }
-    .callback-section__wrapper {
 
-        padding: 0px 16px!important;
-    }
     .callback-section button.btn.btn-primary {
+        width: 100%;
+    }
+    .callback-section p.small.text-muted {
+        font-size: 0.75rem!important;
+        text-align: center;
+    }
+    /*9йблок*/
+    .contacts-section a.btn.btn-outline-primary {
         width: 100%;
     }
 }
