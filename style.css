@@ -3,6 +3,53 @@ body {
     background-color: #f2f2f2!important;
 }
 
+/*header*/
+nav {
+    background: #f2f2f2!important;
+}
+.navbar-brand span {
+    color: #0d6efd;
+}
+/* Desktop menu links */
+.menu-link {
+    color: #212529;
+    text-decoration: none;
+    padding: 0.5rem 0;           /* vertical padding for clickable area */
+    margin-right: 1rem;         /* spacing between menu items */
+    display: inline-block;
+}
+.menu-link:hover {
+    color: #0a58ca;             /* darker blue on hover */
+    text-decoration: none;
+}
+/* "Request a Quote" button style */
+.quote-btn {
+    background-color: #fff;
+    color: #0d6efd;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.375rem;    /* rounded corners */
+    font-weight: 600;           /* semi-bold text */
+    text-decoration: none;
+    display: inline-block;
+}
+.quote-btn:hover {
+    background-color: #f8f9fa;
+    color: #0a58ca;
+    text-decoration: none;
+}
+/* Offcanvas menu link adjustments */
+.offcanvas-body a.menu-link {
+    display: block;
+    margin-right: 0;            /* no right margin in offcanvas (full-width links) */
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+.offcanvas.offcanvas-start {
+    width: 100vw !important;
+}
+
+/*1йблок*/
 .section-main {
     background-color: #f2f2f2;
 }
@@ -401,6 +448,17 @@ h1 .highlight {
     user-select: none;
     margin-top: -40px;
 }
+.btn-close {
+    background: none!important;
+    -webkit-mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='%23000' d='M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    background-color: #3366FF!important;
+    width: 1.5rem;
+    height: 1.5rem;
+    border: none;
+    opacity: 1!important;
+}
 @media (max-width: 1400px) {
     .partners-section .trusted-bg-text {
         font-size: 19.818vw;
@@ -414,6 +472,18 @@ h1 .highlight {
         font-size: 17.818vw;
         margin-top:  -3vw;
     }
+}
+@media (max-width: 992px) {
+
+    .navbar-toggler:focus {
+
+        box-shadow: none!important;
+    }
+    .btn-close:focus {
+
+        box-shadow: none!important;
+    }
+
 }
 @media (max-width: 720px) {
     .equipment-card {
