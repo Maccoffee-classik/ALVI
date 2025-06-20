@@ -142,6 +142,7 @@ h1 .highlight {
 /*3йблок*/
 
 .partners-section {
+    position: relative;
     padding-top: 135px;
     padding-bottom: 120px;
     background-color: #f2f2f2;
@@ -150,20 +151,20 @@ h1 .highlight {
     background-color: #ffffff;
     border-radius: 12px;
     padding: 64px!important;
-    position: relative;
+
 
 }
 
 /* Фоновый текст "trusted by" */
 .partners-section .trusted-bg-text {
-    position: absolute;
-    top: -73px;
+    margin-bottom: -135px;
+   /* position: absolute;
+    top: 63px;
     left: 50%;
-    transform: translate(-50%, -50%);
-    font-weight: 600;
-    font-size: 18rem;
+    transform: translate(-50%, -50%);*/
+    font-size: 17rem;
     color: #fff;
-
+    font-weight: 700;
     white-space: nowrap;
     pointer-events: none;
     user-select: none;
@@ -280,10 +281,11 @@ h1 .highlight {
 /* Large background "OUR PROJECTS" text styling */
 
 .project-section .projects-bg-text {
-    position: absolute;
+    margin-bottom: -115px;
+   /* position: absolute;
     top: -60px;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);*/
     font-weight: 600;
     font-size: 15rem;
     color: #fff;
@@ -291,19 +293,7 @@ h1 .highlight {
     pointer-events: none;
     user-select: none;
 }
-.bg-text {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    width: 100%;
-    transform: translateY(-50%);
-    text-align: center;
-    font-size: 12rem;
-    font-weight: 700;
-    color: rgba(0, 0, 0, 0.1);   /* grey text with low opacity */
-    pointer-events: none;       /* make it non-interactive */
-    user-select: none;          /* prevent text selection */
-}
+
 /*6йблок*/
 .text-primary {
     color: #0158FF !important;
@@ -470,11 +460,11 @@ footer a:hover {
 @media (max-width: 1400px) {
     .partners-section .trusted-bg-text {
         font-size: 19.818vw;
-        top: -5vw;
+        margin-bottom: -10vw;
     }
     .project-section .projects-bg-text {
         font-size: 17.818vw;
-        top: -5vw;
+        margin-bottom: -9vw;
     }
     .contacts-section .alvigroup-bg-text {
         font-size: 17.818vw;
