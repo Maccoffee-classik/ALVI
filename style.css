@@ -484,8 +484,12 @@ h1 .highlight {
         box-shadow: none!important;
     }
 
+
 }
 @media (max-width: 720px) {
+    .quote-btn {
+        margin-bottom: 4vh;
+    }
     .equipment-card {
         height: 153px;
     }
