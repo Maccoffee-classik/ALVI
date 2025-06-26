@@ -5,7 +5,9 @@ body {
 
 /*header*/
 nav {
-    background: #f2f2f2!important;
+    background: rgba(240, 240, 240, 0.3) !important;
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
 }
 .navbar-brand span {
     color: #0d6efd;
@@ -15,7 +17,7 @@ nav {
     color: #212529;
     text-decoration: none;
     padding: 0.5rem 0;           /* vertical padding for clickable area */
-    margin-right: 1rem;         /* spacing between menu items */
+    margin-right: 2rem;         /* spacing between menu items */
     display: inline-block;
 }
 .menu-link:hover {
@@ -25,17 +27,18 @@ nav {
 /* "Request a Quote" button style */
 .quote-btn {
     background-color: #fff;
-    color: #0d6efd;
-    padding: 0.5rem 1rem;
+    color: #0158FF;
+    padding: 14px 24px;
+    line-height: 1;
     border: none;
-    border-radius: 0.375rem;    /* rounded corners */
-    font-weight: 600;           /* semi-bold text */
+    border-radius: 8px;    /* rounded corners */
+    font-weight: 400;           /* semi-bold text */
     text-decoration: none;
     display: inline-block;
 }
 .quote-btn:hover {
-    background-color: #f8f9fa;
-    color: #0a58ca;
+    background-color: #0051ED;
+    color: #ffffff;
     text-decoration: none;
 }
 /* Offcanvas menu link adjustments */
@@ -81,12 +84,21 @@ h1 .highlight {
 }
 
 .btn-primary {
+
     background-color: #0158FF;
     border-color: #0158FF;
+    color:#ffffff;
+
+    padding: 14px 24px!important;
+    line-height: 1!important;
+    font-size: 1rem!important;
+    border-radius: 8px!important;    /* rounded corners */
+    font-weight: 400!important;           /* semi-bold text */
+
 }
 
 .btn-primary:hover {
-    background-color: #0147cc;
+    background-color: #0051ED;
     border-color: #0147cc;
 }
 
@@ -406,7 +418,15 @@ h1 .highlight {
 .form-control {
     background: transparent!important;
 }
-    /*9йблок*/
+.btn-outline-primary {
+    padding: 14px 24px!important;
+    line-height: 1!important;
+    font-size: 1rem!important;
+    border-radius: 8px!important;    /* rounded corners */
+    font-weight: 400!important;
+}
+
+/*9йблок*/
 .contacts-section {
     padding-top: 120px;
 
@@ -455,7 +475,7 @@ footer a {
     color: #666;
 }
 footer a:hover {
-    color: #000;
+    color: #0051ED!important;
     text-decoration: underline;
 }
 
@@ -472,6 +492,15 @@ footer a:hover {
     overflow: auto; /* прокрутка страницы, если содержимое длинное */
     background-color: rgba(0, 0, 0, 0.5); /* полупрозрачный тёмный фон */
 
+}
+.file-status {
+    display: flex;
+    justify-content: flex-start;
+}
+.file-status .file-name {
+    font-weight: 600;
+    border: 2px solid #007bff;
+    color: #007bff;
 }
 
 /* Показ модального (класс open добавляется через JS) */
@@ -545,7 +574,8 @@ footer a:hover {
 .form-group label {
     display: block;
     margin-bottom: 0px;
-    font-weight: 500;
+    font-weight: 400;
+    font-size: 14px;
 }
 .modal textarea {
     resize: none;
@@ -753,7 +783,7 @@ footer a:hover {
     .section-main__wrapper {
 
         border-radius: 8px!important;
-        padding: 48px 16px!important;
+        padding: 48px 0 32px 16px !important;
     }
     .section-main h1 {
         font-size: 2rem!important;
@@ -967,8 +997,9 @@ footer a:hover {
     .modal-content {
 
         padding: 48px 16px;
-
+        top: 60%;
     }
+
     .modal label {
         font-size: 0.875rem;
     }
