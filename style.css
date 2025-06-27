@@ -198,6 +198,7 @@ h1 .highlight {
 /*4йблок*/
 .equipment-section {
     padding-bottom: 0px;
+    scroll-margin-top: 80px;
 }
 .equipment-card {
     height: 240px;
@@ -1014,6 +1015,9 @@ footer a:hover {
         color: #218250!important;
         font-size: 1.125rem!important;
         font-weight: 500;
+    }
+    .text-green.text-green-mob {
+        font-size: 12px!important;
     }
 
 
