@@ -13,6 +13,7 @@
   <!-- Google Fonts: Manrope -->
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <meta name="allvigroup" content="We are a team of experienced low-voltage specialists working across the ;European Union. Our focus is precision, reliability, and seamless cooperation with general contractors.">
 
 
 </head>
@@ -120,8 +121,8 @@
         <span class="file-note">Upload project files to support<br> your request (optional)</span>
       </div>
       <div id="fileStatusModal" class="d-none file-status align-items-center mt-3">
-        <div class="btn  btn-outline-primary me-5">
-          <span id="fileNameModal">>Add filec</span>
+        <div class="btn  btn-outline-primary me-1 me-md-5 ">
+          <span id="fileNameModal">Add file</span>
         </div>
         <div class="text-green text-green-mob fs-6 d-flex align-items-center">
           <svg width="25" height="25" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -160,18 +161,18 @@
 
     offcanvasEl.querySelectorAll('a[href^="#"]').forEach(link => {
       link.addEventListener('click', function (e) {
-        e.preventDefault(); // отключаем мгновенный переход
+        e.preventDefault();
 
         const targetId = this.getAttribute('href');
         const targetEl = document.querySelector(targetId);
 
         if (targetEl) {
-          offcanvasInstance.hide(); // закрываем меню
+          offcanvasInstance.hide();
 
-          // ждём окончания анимации закрытия
+
           offcanvasEl.addEventListener('hidden.bs.offcanvas', function scrollToTarget() {
-            targetEl.scrollIntoView({ behavior: 'smooth' }); // плавный скролл
-            offcanvasEl.removeEventListener('hidden.bs.offcanvas', scrollToTarget); // удалить обработчик после первого вызова
+            targetEl.scrollIntoView({ behavior: 'smooth' });
+            offcanvasEl.removeEventListener('hidden.bs.offcanvas', scrollToTarget);
           });
         }
       });
@@ -179,8 +180,8 @@
   });
 
   AOS.init({
-    once: true,         // анимация один раз при скролле :contentReference[oaicite:3]{index=3}
-    duration: 2000,      // продолжительность анимации (600 мс)
+    once: true,
+    duration: 2000,
     easing: 'ease-out'
   });
 
@@ -188,40 +189,40 @@
   document.getElementById('projectFileModal').addEventListener('change', function () {
     const file = this.files[0];
     if (file) {
-      // Показать блок с именем файла
+
 
       document.getElementById('fileStatusModal').classList.remove('d-none');
 
-      // Скрыть блок загрузки
+
       document.querySelector('.file-upload').classList.add('d-none');
     }
   });
 
 
-  // Получаем элементы модальных окон и кнопок
+
   const quoteModal = document.getElementById('quoteModal');
   const successModal = document.getElementById('successModal');
   const openButtons = document.querySelectorAll('.open-quote-btn');
   const closeQuoteBtn = document.getElementById('closeQuoteModal');
   const closeSuccessBtn = document.getElementById('closeSuccessModal');
 
-  // Открытие модального окна с формой по клику на каждую кнопку "Request a Quote"
+
   openButtons.forEach(button => {
     button.addEventListener('click', () => {
       quoteModal.style.display = 'block';
     });
   });
 
-  // Закрытие модалки заявки (форма) по клику на крестик
+
   closeQuoteBtn.addEventListener('click', () => {
     quoteModal.style.display = 'none';
   });
-  // Закрытие модалки успеха по клику на крестик
+
   closeSuccessBtn.addEventListener('click', () => {
     successModal.style.display = 'none';
   });
 
-  // Дополнительно: клик по фону модалки закрывает её
+
   window.addEventListener('click', (event) => {
     if (event.target === quoteModal) {
       quoteModal.style.display = 'none';
@@ -231,28 +232,28 @@
     }
   });
 
-  // Функция проверки полей формы (возвращает true, если ошибок нет)
+
   function validateForm(formElement) {
     let isValid = true;
-    // Находим все обязательные поля внутри формы
+
     const requiredFields = formElement.querySelectorAll('input[required], textarea[required]');
     requiredFields.forEach(field => {
       const value = field.value.trim();
       if (!value) {
-        // Поле пустое – показываем сообщение об ошибке
+
         isValid = false;
         if (field.classList.contains('form-control')) {
           // Для формы с Bootstrap
           field.classList.add('is-invalid');
         } else {
-          // Для простой формы (в модалке)
-          field.classList.add('error-field');  // подсветка красным (определите .error-field в CSS)
+
+          field.classList.add('error-field');
         }
-        // Показать сообщение об ошибке (следующий элемент с текстом ошибки)
+
         const errorMsg = field.parentElement.querySelector('.error-msg, .invalid-feedback');
         if (errorMsg) errorMsg.style.display = 'block';
       } else {
-        // Поле заполнено – убираем ошибку
+
         if (field.classList.contains('form-control')) {
           field.classList.remove('is-invalid');
         } else {
@@ -265,20 +266,19 @@
     return isValid;
   }
 
-  // Навешиваем обработчики submit на все формы с классом "quote-form"
+
   const forms = document.querySelectorAll('form.quote-form');
   forms.forEach(form => {
     form.addEventListener('submit', (e) => {
-      e.preventDefault(); // отменяем обычную отправку
+      e.preventDefault();
       if (validateForm(form)) {
-        // Если форма прошла валидацию
-        // Если это модальная форма, закрываем её
+
         if (form.id === 'quoteFormModal') {
           quoteModal.style.display = 'none';
         }
-        // Открываем модальное окно успеха
+
         successModal.style.display = 'block';
-        // Дополнительно можно сбросить форму:
+
         form.reset();
       }
     });

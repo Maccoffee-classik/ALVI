@@ -13,6 +13,7 @@
     <!-- Google Fonts: Manrope -->
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <meta name="allvigroup" content="We are a team of experienced low-voltage specialists working across the ;European Union. Our focus is precision, reliability, and seamless cooperation with general contractors.">
 
 
 </head>
@@ -99,14 +100,12 @@
 <section class="partners-section ">
     <div class="container-xxl  trusted-bg-text" data-aos="zoom-in"  >trusted by</div>
     <div class="container-xxl   partners-section__wrapper" data-aos="zoom-in" >
-    <!-- Бледный фоновой текст -->
 
-        <!-- Заголовок раздела -->
         <div class="row" >
             <div class="col-12 col-md-4">
             <h2 class="mb-4"><span class="highlight">Partners</span> We Work With</h2>
             </div>
-            <!-- Сетка с логотипами партнёров -->
+
             <div class="col-12 col-md-8">
                 <div class="row g-3">
                     <div class="col-4 col-md-6 col-lg-3 text-center">
@@ -116,7 +115,7 @@
                         <img src="img/cardin.svg" alt="Cardin" />
                     </div>
                     <div class="col-4 col-md-6 col-lg-3 text-center">
-                        <img src="img/eurotempest.svg" alt="Eurotempest" />
+                        <img src="img/eurotempest.png" alt="Eurotempest" />
                     </div>
                     <div class="col-4 col-md-6 col-lg-3 text-center">
                         <img src="img/foxsec.svg" alt="FoxSec" />
@@ -143,7 +142,7 @@
                         <img src="img/glomex.svg" alt="Glomex" />
                     </div>
                     <div class="col-4 col-md-6 col-lg-3 text-center">
-                        <img src="img/imin.svg" alt="iMin" />
+                        <img src="img/imin.png" alt="iMin" />
                     </div>
             </div>
             </div>
@@ -584,7 +583,7 @@
 
 
     </div>
-    <!-- Фоновое название компании -->
+
 
         <div class="container-xxl alvigroup-bg-text text-center " style="letter-spacing: -2px;" data-aos="zoom-in">  <img class="w-100"src="img/alvigroup.svg" alt="logoallvigroup"></div>
 
@@ -599,7 +598,7 @@
     </div>
 </footer>
 
-<!-- Модальное окно с формой заявки -->
+
 <div id="quoteModal" class="modal">
     <div class="modal-content">
         <span id="closeQuoteModal" class="close">&times;</span>
@@ -648,7 +647,7 @@
     </div>
 </div>
 
-<!-- Модалка успешной отправки (без изменений) -->
+
 <div id="successModal" class="modal">
     <div class="modal-content success-content">
         <span id="closeSuccessModal" class="close">&times;</span>
@@ -672,15 +671,15 @@
 
         offcanvasEl.querySelectorAll('a[href^="#"]').forEach(link => {
             link.addEventListener('click', function (e) {
-                e.preventDefault(); // отключаем мгновенный переход
+                e.preventDefault();
 
                 const targetId = this.getAttribute('href');
                 const targetEl = document.querySelector(targetId);
 
                 if (targetEl) {
-                    offcanvasInstance.hide(); // закрываем меню
+                    offcanvasInstance.hide();
 
-                    // ждём окончания анимации закрытия
+
                     offcanvasEl.addEventListener('hidden.bs.offcanvas', function scrollToTarget() {
                         targetEl.scrollIntoView({ behavior: 'smooth' }); // плавный скролл
                         offcanvasEl.removeEventListener('hidden.bs.offcanvas', scrollToTarget); // удалить обработчик после первого вызова
@@ -691,18 +690,18 @@
     });
 
     AOS.init({
-        once: true,         // анимация один раз при скролле :contentReference[oaicite:3]{index=3}
-        duration: 2000,      // продолжительность анимации (600 мс)
+        once: true,
+        duration: 2000,
         easing: 'ease-out'
     });
     document.getElementById('projectFileModal').addEventListener('change', function () {
         const file = this.files[0];
         if (file) {
-            // Показать блок с именем файла
+
 
             document.getElementById('fileStatusModal').classList.remove('d-none');
 
-            // Скрыть блок загрузки
+
             document.querySelector('.file-upload').classList.add('d-none');
         }
     });
@@ -710,7 +709,7 @@
     document.getElementById('projectFileMain').addEventListener('change', function () {
         const file = this.files[0];
         if (file) {
-            // Показать имя файла
+
 
             document.getElementById('fileStatusMain').classList.remove('d-none');
 
@@ -722,30 +721,30 @@
 
 
 
-        // Получаем элементы модальных окон и кнопок
+
         const quoteModal = document.getElementById('quoteModal');
         const successModal = document.getElementById('successModal');
         const openButtons = document.querySelectorAll('.open-quote-btn');
         const closeQuoteBtn = document.getElementById('closeQuoteModal');
         const closeSuccessBtn = document.getElementById('closeSuccessModal');
 
-        // Открытие модального окна с формой по клику на каждую кнопку "Request a Quote"
+
         openButtons.forEach(button => {
         button.addEventListener('click', () => {
             quoteModal.style.display = 'block';
         });
     });
 
-        // Закрытие модалки заявки (форма) по клику на крестик
+
         closeQuoteBtn.addEventListener('click', () => {
         quoteModal.style.display = 'none';
     });
-        // Закрытие модалки успеха по клику на крестик
+
         closeSuccessBtn.addEventListener('click', () => {
         successModal.style.display = 'none';
     });
 
-        // Дополнительно: клик по фону модалки закрывает её
+
         window.addEventListener('click', (event) => {
         if (event.target === quoteModal) {
         quoteModal.style.display = 'none';
@@ -755,28 +754,28 @@
     }
     });
 
-        // Функция проверки полей формы (возвращает true, если ошибок нет)
+
         function validateForm(formElement) {
         let isValid = true;
-        // Находим все обязательные поля внутри формы
+
         const requiredFields = formElement.querySelectorAll('input[required], textarea[required]');
         requiredFields.forEach(field => {
         const value = field.value.trim();
         if (!value) {
-        // Поле пустое – показываем сообщение об ошибке
+
         isValid = false;
         if (field.classList.contains('form-control')) {
-        // Для формы с Bootstrap
+
         field.classList.add('is-invalid');
     } else {
-        // Для простой формы (в модалке)
-        field.classList.add('error-field');  // подсветка красным (определите .error-field в CSS)
+
+        field.classList.add('error-field');
     }
-        // Показать сообщение об ошибке (следующий элемент с текстом ошибки)
+
         const errorMsg = field.parentElement.querySelector('.error-msg, .invalid-feedback');
         if (errorMsg) errorMsg.style.display = 'block';
     } else {
-        // Поле заполнено – убираем ошибку
+
         if (field.classList.contains('form-control')) {
         field.classList.remove('is-invalid');
     } else {
@@ -789,20 +788,19 @@
         return isValid;
     }
 
-        // Навешиваем обработчики submit на все формы с классом "quote-form"
+
         const forms = document.querySelectorAll('form.quote-form');
         forms.forEach(form => {
         form.addEventListener('submit', (e) => {
-            e.preventDefault(); // отменяем обычную отправку
+            e.preventDefault();
             if (validateForm(form)) {
-                // Если форма прошла валидацию
-                // Если это модальная форма, закрываем её
+
                 if (form.id === 'quoteFormModal') {
                     quoteModal.style.display = 'none';
                 }
-                // Открываем модальное окно успеха
+
                 successModal.style.display = 'block';
-                // Дополнительно можно сбросить форму:
+
                 form.reset();
             }
         });

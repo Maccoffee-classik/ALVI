@@ -227,6 +227,7 @@ h1 .highlight {
     padding-top: 0px;
     padding-bottom: 120px;
     background-color: #f2f2f2;
+    scroll-margin-top: 80px;
 }
 .project-section__wrapper {
     background-color: #ffffff;
@@ -297,10 +298,7 @@ h1 .highlight {
 
 .project-section .projects-bg-text {
     margin-bottom: -115px;
-   /* position: absolute;
-    top: -60px;
-    left: 50%;
-    transform: translate(-50%, -50%);*/
+
     font-weight: 600;
     font-size: 15rem;
     color: #fff;
@@ -309,7 +307,7 @@ h1 .highlight {
     user-select: none;
 }
 
-/*6йблок*/
+/*6section*/
 .text-primary {
     color: #0158FF !important;
 }
@@ -415,7 +413,7 @@ h1 .highlight {
 }
 .form-control.is-invalid {
     background-image: none !important;
-    padding-right: 0 !important; /* убираем место под иконку */
+    padding-right: 0 !important;
 }
 .form-control {
     background: transparent!important;
